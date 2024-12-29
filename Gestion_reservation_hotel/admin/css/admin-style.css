@@ -1,0 +1,202 @@
+/* Variables de couleurs */
+:root {
+    --primary-color: #7793C2;
+    --secondary-color: #9CADD8;
+    --success-color: #68B984;
+    --info-color: #87CEEB;
+    --warning-color: #FFB84C;
+    --danger-color: #FF6B6B;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69;
+    
+    /* Nouvelles couleurs personnalisées */
+    --sidebar-bg: #2B3467;
+    --sidebar-text: #ffffff;
+    --sidebar-hover: #4E64A6;
+    --content-bg: #F5F5F5;
+    --card-bg: #ffffff;
+    --card-border: #E8E8E8;
+    --text-primary: #2B3467;
+    --text-secondary: #666666;
+}
+
+/* Style général */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--content-bg);
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    min-height: 100vh;
+    width: 250px;
+    background: linear-gradient(180deg, var(--sidebar-bg) 0%, #4E64A6 100%);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.sidebar-brand {
+    color: var(--sidebar-text) !important;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1.5rem 1rem;
+    display: block;
+}
+
+.sidebar .nav-link {
+    color: var(--sidebar-text);
+    padding: 0.8rem 1rem;
+    margin: 0.2rem 0;
+    border-radius: 0.35rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .nav-link:hover, 
+.sidebar .nav-link.active {
+    background-color: var(--sidebar-hover);
+    color: var(--sidebar-text);
+}
+
+/* Main Content Styles */
+.content {
+    margin-left: 250px;
+    padding: 2rem;
+    background-color: var(--content-bg);
+    min-height: 100vh;
+    flex: 1;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--card-border);
+}
+
+.page-title {
+    color: var(--text-primary);
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Cards Styles */
+.card {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.15rem 1.75rem rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    background: var(--card-bg);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.stat-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.stat-card.primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.stat-card.success {
+    background: linear-gradient(45deg, var(--success-color), #90C8AC);
+}
+
+.stat-card.info {
+    background: linear-gradient(45deg, var(--info-color), #B4E4FF);
+}
+
+.stat-card.warning {
+    background: linear-gradient(45deg, var(--warning-color), #FFD384);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Table Styles */
+.table {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table thead th {
+    background: var(--sidebar-bg);
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(78, 100, 166, 0.05);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Navigation */
+.nav-link {
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    background-color: rgba(119, 147, 194, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        transform: translateX(-100%);
+    }
+    
+    .content {
+        margin-left: 0;
+    }
+    
+    .sidebar.active {
+        width: 250px;
+        transform: translateX(0);
+    }
+    
+    .stat-card .stat-value {
+        font-size: 1.5rem;
+    }
+}

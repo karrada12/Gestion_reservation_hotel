@@ -1,0 +1,256 @@
+/* Variables */
+:root {
+    --primary-color: #1a237e;
+    --accent-color: #304ffe;
+    --text-color: #37474f;
+    --light-gray: #f5f6fa;
+    --border-radius: 15px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --navbar-height: 70px;
+}
+
+/* Style général */
+.hotel-details {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f6f8fa 0%, #e9ecef 100%);
+    min-height: calc(100vh - var(--navbar-height));
+}
+
+/* Style du formulaire de réservation */
+.reservation-form {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 2rem;
+}
+
+.reservation-form h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.reservation-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.reservation-form .form-label {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.reservation-form .form-control {
+    border: 2px solid #e9ecef;
+    padding: 0.8rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.reservation-form .form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(48, 79, 254, 0.25);
+}
+
+.btn-reserve {
+    background: linear-gradient(135deg, #304ffe 0%, #1a237e 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-reserve:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(48, 79, 254, 0.4);
+}
+
+/* Style des informations de l'hôtel */
+.hotel-main-info {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.hotel-header {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    padding: 3rem 2rem;
+    color: white;
+    position: relative;
+}
+
+.hotel-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 20px solid #1a237e;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.hotel-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-header .lead {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hotel-info {
+    padding: 3rem 2rem;
+}
+
+.info-section {
+    margin-bottom: 2.5rem;
+}
+
+.hotel-images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hotel-images img:hover {
+    transform: scale(1.05);
+}
+
+.info-section h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    font-weight: 600;
+}
+
+.info-section p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Navbar fixe */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Ajuster le contenu principal pour la navbar fixe */
+body {
+    padding-top: var(--navbar-height);
+}
+
+/* Alertes stylisées */
+.alert {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    color: #1b5e20;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    color: #b71c1c;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    color: #f57f17;
+}
+
+/* Responsive design */
+@media (max-width: 991px) {
+    .reservation-form {
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .hotel-header {
+        padding: 2rem;
+    }
+    
+    .hotel-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hotel-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .reservation-form, .hotel-info {
+        padding: 1.5rem;
+    }
+    
+    .info-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hotel-main-info {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.reservation-form {
+    animation: fadeIn 0.6s ease-out 0.2s backwards;
+}

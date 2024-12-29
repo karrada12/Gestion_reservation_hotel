@@ -1,0 +1,190 @@
+/* Style général de la page */
+.profile-container {
+    padding-top: 90px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+/* Style des cartes */
+.profile-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card .card-header {
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 25px 30px;
+}
+
+.profile-card .card-header h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-card .card-header h3 i {
+    color: #3498db;
+}
+
+.profile-card .card-body {
+    padding: 30px;
+}
+
+/* Style des formulaires */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    color: #34495e;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    height: 50px;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    background: #ffffff;
+}
+
+/* Style des boutons */
+.btn-update {
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    font-weight: 500;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-update:hover {
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+}
+
+/* Style des alertes */
+.alert {
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-success {
+    background: #e8f6ef;
+    color: #0f6c3f;
+}
+
+.alert-danger {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Section mot de passe */
+.password-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #edf2f7;
+}
+
+.password-section h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.password-section h4 i {
+    color: #3498db;
+}
+
+/* Style des statistiques */
+.stat-item {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: #f8fafc;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Style du lien vers les réservations */
+.btn-reservations {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-reservations:hover {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+}

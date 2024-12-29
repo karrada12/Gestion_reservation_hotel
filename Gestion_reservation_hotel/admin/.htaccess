@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+
+# Rediriger vers login.php si non connecté
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+
+# Protection du répertoire
+<Files "config.php">
+Order Allow,Deny
+Deny from all
+</Files>

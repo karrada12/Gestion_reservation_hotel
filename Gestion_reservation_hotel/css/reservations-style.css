@@ -1,0 +1,195 @@
+/* Style général de la page */
+.reservations-container {
+    padding-top: 90px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.page-title {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+}
+
+/* Style du tableau */
+.reservation-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+.table thead th {
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 15px;
+    border: none;
+    white-space: nowrap;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fafc;
+    transform: scale(1.01);
+}
+
+.table tbody td {
+    padding: 20px 15px;
+    vertical-align: middle;
+    color: #2c3e50;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.95rem;
+}
+
+/* Style des badges et boutons */
+.badge {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.badge-confirmed {
+    background-color: #10b981;
+    color: white;
+}
+
+.badge-pending {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-details {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+}
+
+.btn-details:hover {
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(41, 128, 185, 0.3);
+}
+
+.btn-search {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+.btn-search:hover {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+/* Style des alertes */
+.alert {
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+}
+
+.alert-info {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.alert-danger {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Style pour les prix */
+.price {
+    font-weight: 600;
+    color: #3498db;
+}
+
+/* Style pour les dates */
+.date {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+    
+    .table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #edf2f7;
+    }
+    
+    .table tbody td {
+        display: block;
+        text-align: right;
+        padding: 12px 15px;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .table tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: 600;
+        text-align: left;
+    }
+    
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animation pour le chargement */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reservation-table {
+    animation: fadeIn 0.5s ease-out;
+}
